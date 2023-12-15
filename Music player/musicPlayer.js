@@ -76,12 +76,11 @@ const playlist = [
     speakToMe, Breathe, onTheRun, time, theGreatGigInTheSky, 
     money, usAndThem, anyColourYouLike, brainDamage, eclipse
 ];
-
 let index = 0;
 let isPlaying = false;
 
 function inicializeSong(){
-    cover.src = 'images/Dark_side_of_the_moon.png';
+    cover.src = 'images/The dark side of the moon.jpg';
     song.src = `songs/${playlist[index].file}.mp3`;
     songName.innerText = playlist[index].songName;
     bandName.innerText = playlist[index].artist;
