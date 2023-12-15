@@ -1,1 +1,2 @@
-# Repository for learning javascript.
+# Learning JavaScript.
+Repository for learning javascript.
