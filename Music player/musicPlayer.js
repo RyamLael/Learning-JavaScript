@@ -8,6 +8,7 @@ const song = document.getElementById('audio');
 const previous = document.getElementById('previous');
 const playPause = document.getElementById('play');
 const next = document.getElementById('next');
+const currentProgress = document.getElementById('current-progress');
 
 //Creating a dictionary to each music
 const speakToMe = {
@@ -163,6 +164,11 @@ function updateLikeStatus(){
     }
 }
 
+function updateProgressBar(){
+    const barWidth = (song.currentTime/song.duration)*100;
+    currentProgress.style.setProperty('--progress', `${barWidth}%`);
+}
+
 //main?
 inicializeSong();
 
@@ -171,3 +177,4 @@ playPause.addEventListener('click', playPauseDecider);
 previous.addEventListener('click', previousMusic);
 next.addEventListener('click', nextMusic);
 like.addEventListener('click', likeDecider);
+song.addEventListener('timeupdate', updateProgressBar);

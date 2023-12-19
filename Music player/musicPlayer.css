@@ -54,9 +54,11 @@ button{
 }
 
 #current-progress{
+    --progress: 0%;
     background-color: white;
+    width: var(--progress);
     height: inherit;
-    width: 50%;
+    border-radius: inherit;
 }
 
 .light-color{
